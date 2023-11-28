@@ -12,3 +12,17 @@
 * [Garbage collector](https://intranet.alxswe.com/rltoken/CimKF3MlfErabvZWtFxHjg)
 * [Python Interpreter](https://intranet.alxswe.com/rltoken/a5z3uSkiby1Xw679cFiw1Q)
 * [Python bytecode](https://intranet.alxswe.com/rltoken/oJ2v8bVCLZmAowJ7WXLzJg)
+
+## Linter
+
+### pycodestyle
+
+Make sure you have pycodestyle installed!
+To install use:
+
+* ```$ pip install pycodestyle```
+To check for syntax errors:
+
+* ```pycodestyle --first *.py```
+* ```pycodestyle --show-source --show-pep8 *.py```
+* ```pycodestyle --statistics -qq *.py```
