@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    '''Import functions to do some maths and print results!'''
+    ''' Import functions to do some maths and print results! '''
     from calculator_1 import add, sub, mul, div
 
     a = 10
