@@ -391,4 +391,14 @@ Write the Python function ```def magic_calculation(a, b):``` that does exactly t
 * Tip: [Python bytecode](https://intranet.alxswe.com/rltoken/B38QeZHREbvgq-wY7Ze3vQ)
 
 **coded with lots of love 😘 to:**
-The Queen of my heart ~ 🥰 Centrine Adioz 🥰
+<span style=
+"background: burlywood; border-radius: 5px; padding: 3px; margin: 3px; color: #000; font-size: 14px; font-style: italic;
+">
+The Queen of my heart ~
+</span>
+🥰
+<span style=
+"background: crimson; border-radius: 5px; padding: 2px 18px 2px 16px; margin: 3px; color: #fff; font-size: 16px; font-weight: bold; text-decoration: italic;
+">
+ Centrine Adioz
+</span>
