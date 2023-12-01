@@ -14,6 +14,7 @@
 
                 .bar {
                     background: crimson;
+                    animation: Queen 2s infinite;
                     color: #fff;
                     border-radius: 5px;
                     padding: 2px 18px 2px 16px;
@@ -21,6 +22,14 @@
                     font-size: 16px;
                     font-weight: bold;
                     text-decoration: italic;
+                }
+                @keyframes Queen {
+                    from {
+                        color: burlywood;
+                    }
+                    to {
+                        color: yellow;
+                    }
                 }
 
                 @keyframes titles {
