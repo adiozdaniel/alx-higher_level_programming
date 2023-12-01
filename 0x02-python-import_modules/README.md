@@ -432,15 +432,4 @@ guillaume@ubuntu:~/0x02$ wc -l 103-fast_alphabet.py
 guillaume@ubuntu:~/0x02$
 ```
 
-**coded with lots of love 😘 to:**
-<span style=
-"background: burlywood; border-radius: 5px; padding: 3px; margin: 3px; color: #000; font-size: 14px; font-style: italic;
-">
-The Queen of my heart ~
-</span>
-🥰
-<span style=
-"background: crimson; border-radius: 5px; padding: 2px 18px 2px 16px; margin: 3px; color: #fff; font-size: 16px; font-weight: bold; text-decoration: italic;
-">
- Centrine Adioz
-</span>
+![greeting](../files/greeting.svg)

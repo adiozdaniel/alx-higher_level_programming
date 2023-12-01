@@ -498,15 +498,4 @@ Write the Python function ```def magic_calculation(a, b, c):``` that does exactl
              47 RETURN_VALUE
 ```
 
-**coded with lots of love 😘 to:**
-<span style=
-"background: burlywood; border-radius: 5px; padding: 3px; margin: 3px; color: #000; font-size: 14px; font-style: italic;
-">
-The Queen of my heart ~
-</span>
-🥰
-<span style=
-"background: crimson; border-radius: 5px; padding: 2px 18px 2px 16px; margin: 3px; color: #fff; font-size: 16px; font-weight: bold; text-decoration: italic;
-">
- Centrine Adioz
-</span>
+![greeting](../files/greeting.svg)
