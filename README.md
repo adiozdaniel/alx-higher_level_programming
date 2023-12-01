@@ -30,5 +30,4 @@ To check for syntax errors:
 * ```pycodestyle --show-source --show-pep8 *.py```
 * ```pycodestyle --statistics -qq *.py```
 
-**coded with lots of love 😘 to:**
 ![greeting](files/greeting.svg)

@@ -432,5 +432,4 @@ guillaume@ubuntu:~/0x02$ wc -l 103-fast_alphabet.py
 guillaume@ubuntu:~/0x02$
 ```
 
-**coded with lots of love 😘 to:**
 ![greeting](css/greeting.svg)
