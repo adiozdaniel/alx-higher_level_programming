@@ -1,0 +1,8 @@
+.title {
+    transition: fill .1s ease;
+    cursor: pointer;
+    font-family: Helvetica, sans-serif;
+    fill:#2c1300;
+    text-anchor: middle;
+    font-size: 24px;
+  }

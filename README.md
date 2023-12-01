@@ -34,3 +34,6 @@ To check for syntax errors:
 * ```pycodestyle --statistics -qq *.py```
 
 </div>
+
+**coded with lots of love 😘 to:**
+![greeting](files/greeting.svg)
