@@ -1,8 +1,5 @@
 # Python programming
 
-<div
-    style="display: flex; flex-direction: column; flex-align: center;"
->
 <img
     src="./files/Flyingcircus_2.jpg"
     style="border-radius: 20px; padding: 2px; box-shadow: 0 0 3px;"
@@ -32,8 +29,6 @@ To check for syntax errors:
 * ```pycodestyle --first *.py```
 * ```pycodestyle --show-source --show-pep8 *.py```
 * ```pycodestyle --statistics -qq *.py```
-
-</div>
 
 **coded with lots of love 😘 to:**
 ![greeting](files/greeting.svg)
