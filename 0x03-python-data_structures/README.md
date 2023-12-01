@@ -432,4 +432,4 @@ guillaume@ubuntu:~/0x02$ wc -l 103-fast_alphabet.py
 guillaume@ubuntu:~/0x02$
 ```
 
-![greeting](css/greeting.svg)
+![greeting](../files/greeting.svg)
