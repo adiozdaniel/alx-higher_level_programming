@@ -3,12 +3,12 @@
         <div xmlns="http://www.w3.org/1999/xhtml">
             <style>
                 h1 {
-                    color: red;
+                    color: crimson;
                     animation: titles 2s infinite;
                     font-style: italic;
                 }
 
-                h2 {
+                .coded {
                     color: crimson;
                 }
 
@@ -21,7 +21,7 @@
                     }
                 }
             </style>
-            <div>
+            <div class="coded">
                 <h2>coded with lots of love 😘 to:</h2>
             </div>
             <span>
