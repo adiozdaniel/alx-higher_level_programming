@@ -9,7 +9,19 @@
                 }
 
                 .coded {
-                    color: crimson;
+                    color: tomato;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .cooled {
+                    margin-top: -32px;
+                    margin-left: -18px;
+                    width: 80%;
+                    text-wrap: nowrap;
+                    font-size: 12px;
                 }
 
                 .bar {
@@ -46,7 +58,7 @@
             </style>
             <div class="coded">
                 <h2>coded with lots of love 😘 to:</h2>
-                <span>
+                <span class="cooled">
                     <h1> The Queen of my heart ~ </h1>
                 </span>
                 <div>
