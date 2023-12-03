@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 
+import os
 import ctypes
 
-lib = ctypes.CDLL('./libPyList.so')
+script_dir = os.path.dirname(os.path.abspath(__file__))
+lib_path = os.path.join(script_dir, 'libPyList.so')
+
+lib = ctypes.CDLL(lib_path)
+
 lib.print_python_list_info.argtypes = [ctypes.py_object]
 lister = ['hello', 'World']
 lib.print_python_list_info(lister)
@@ -21,3 +26,8 @@ lister.append(4)
 lib.print_python_list_info(lister)
 lister.pop()
 lib.print_python_list_info(lister)
+
+try:
+    lib = ctypes.CDLL(lib_path)
+except OSError as e:
+    print(f"Error loading the library: {e}")
