@@ -1,4 +1,9 @@
 #include <Python.h>
+#include <object.h>
+#include <listobject.h>
+#include <bytesobject.h>
+#include <bytearrayobject.h>
+#include <bytes_methods.h>
 
 /**
 * print_python_list - Prints information about a Python list.
