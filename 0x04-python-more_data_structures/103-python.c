@@ -17,8 +17,7 @@ void print_python_list(PyObject *p)
 {
 	if (!PyList_Check(p))
 	{
-		PyErr_SetString(PyExc_TypeError, "Object is not a Python list.");
-		PyErr_Print();
+		printf("[ERROR] Invalid Bytes Object");
 		return;
 	}
 
@@ -26,6 +25,7 @@ void print_python_list(PyObject *p)
 
 	if (size < 0)
 	{
+		PyErr_SetString(PyExc_TypeError, "Object list size.");
 		PyErr_Print();
 		return;
 	}
@@ -39,7 +39,16 @@ void print_python_list(PyObject *p)
 	{
 		PyObject *item = PyList_GetItem(p, i);
 
-		printf("Element %zd: %s\n", i, Py_TYPE(item)->tp_name);
+		if (item == NULL)
+		{
+			printf("[ITEM] Invalid List Size");
+			return;
+		}
+
+		/* Get the type name without using Py_TYPE*/
+		const char *type_name = item->ob_type->tp_name;
+
+		printf("Element %zd: %s\n", i, type_name);
 	}
 }
 
@@ -54,12 +63,16 @@ void print_python_list(PyObject *p)
 void print_python_bytes(PyObject *p)
 {
 	if (!PyBytes_Check(p))
+	{
+		printf("[ERROR] Invalid Bytes Object");
 		return;
+	}
 
 	Py_ssize_t size = PyObject_Size(p);
 
 	if (size < 0)
 	{
+		PyErr_SetString(PyExc_TypeError, "Object has invalid size.");
 		PyErr_Print();
 		return;
 	}
@@ -71,14 +84,14 @@ void print_python_bytes(PyObject *p)
 
 	if (bytes_data == NULL)
 	{
-		PyErr_Print();
+		printf("[ERROR] Invalid Bytes Object");
 		return;
 	}
 
 	printf("  first 10 bytes: ");
 	Py_ssize_t i = 0;
 
-	for (; i < size && i < 10; ++i)
+	for (; i < size && i <= 10; ++i)
 	{
 		unsigned char byte = (unsigned char)bytes_data[i];
 
