@@ -88,3 +88,39 @@ void print_python_bytes(PyObject *p)
 
 	printf("\n");
 }
+
+/**
+* main - main function
+* Return: void
+*/
+int main(void)
+{
+	/* Example usage */
+	Py_Initialize();
+
+	/* Create a Python list */
+	PyObject *pyList = PyList_New(3);
+
+	PyList_SetItem(pyList, 0, PyLong_FromLong(42));
+	PyList_SetItem(pyList, 1, PyUnicode_DecodeUTF8("Hello", 5, "strict"));
+	PyList_SetItem(pyList, 2, PyFloat_FromDouble(3.14));
+
+	/* Create a Python bytes object */
+	const char *byteData = "PythonBytes";
+
+	PyObject *pyBytes = PyBytes_FromStringAndSize(byteData, strlen(byteData));
+
+	/* Print information about the Python list and bytes object */
+	print_python_list(pyList);
+	printf("\n");
+	print_python_bytes(pyBytes);
+
+	/* Release the Python objects */
+	Py_XDECREF(pyList);
+	Py_XDECREF(pyBytes);
+
+	/* Finalize the Python interpreter */
+	Py_Finalize();
+
+	return (0);
+}
