@@ -60,7 +60,7 @@ void print_python_list(PyObject *p)
 */
 void print_python_bytes(PyObject *p)
 {
-	if (PyBytes_Check(p) == 0)
+	if (!PyBytes_Check(p))
 	{
 		printf("[.] bytes object info\n");
 		fprintf(stderr, " [Error] Invalid Bytes Object\n");
