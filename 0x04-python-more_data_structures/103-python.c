@@ -1,7 +1,6 @@
 #include <Python.h>
 #include <object.h>
 #include <listobject.h>
-
 /**
 * print_python_list - Prints information about a Python list
 * @p: pointer to a Python list object
@@ -10,7 +9,8 @@ void print_python_list(PyObject *p)
 {
 	if (!PyList_Check(p))
 	{
-		printf("[ERROR] Invalid Python List\n");
+		PyErr_SetString(PyExc_TypeError, "Invalid Python List\n");
+		PyErr_Print();
 		return;
 	}
 
@@ -60,9 +60,10 @@ void print_python_list(PyObject *p)
 */
 void print_python_bytes(PyObject *p)
 {
-	if (!PyBytes_Check(p))
+	if (PyBytes_Check(p) == 0)
 	{
-		printf("[ERROR] Invalid Bytes Object\n");
+		printf("[.] bytes object info\n");
+		fprintf(stderr, " [Error] Invalid Bytes Object\n");
 		return;
 	}
 
