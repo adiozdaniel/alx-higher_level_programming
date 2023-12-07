@@ -8,17 +8,21 @@
                     text-wrap: nowrap;
                 }
 
+                .coded {
+                    color: crimson;
+                }
+
                 @keyframes titles {
                     from {
                         color: burlywood;
                     }
                     to {
-                        color: #361001;
+                        color: crimson;
                     }
                 }
             </style>
             <span>
-                <h1> Python Programming ! </h1>
+                <h1> BE AWARE !!!</h1>
             </span>
         </div>
     </foreignObject>

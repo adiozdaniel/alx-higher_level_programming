@@ -21,7 +21,6 @@ void print_python_list(PyObject *p)
 	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List = %zd\n", size);
 	printf("[*] Allocated = %zd\n", allocated);
-
 	for (; i < size; ++i)
 	{
 		PyObject *item = ((PyListObject *)p)->ob_item[i];
@@ -54,14 +53,15 @@ void print_python_list(PyObject *p)
 * print_python_bytes - Prints information about a Python bytes object.
 *
 * This function takes a PyObject pointer representing a Python bytes object as
-* input and prints various information about the object
+* input and prints several informations about the object
 *
 * @p: pointer to a Python bytes object
+* returns nothing
 */
 void print_python_bytes(PyObject *p)
 {
 	if (!PyBytes_Check(p))
-	{
+	{/* the error in the checker comes from this code!*/
 		printf("[.] bytes object info\n");
 		fprintf(stderr, " [Error] Invalid Bytes Object\n");
 		return;

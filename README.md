@@ -1,9 +1,6 @@
 # ![main](files/main.svg)
 
-<img
-    src="./files/Flyingcircus_2.jpg"
-    style="border-radius: 20px; padding: 2px; box-shadow: 0 0 3px;"
-/>
+![plot](./files/Flyingcircus_2.jpg)
 
 ## Resources
 
@@ -29,5 +26,9 @@ To check for syntax errors:
 * ```pycodestyle --first *.py```
 * ```pycodestyle --show-source --show-pep8 *.py```
 * ```pycodestyle --statistics -qq *.py```
+
+## ![witch](files/witch.svg)
+
+![witches](files/witches.svg)
 
 ![greeting](files/greeting.svg)

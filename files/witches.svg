@@ -1,11 +1,10 @@
-<svg fill="none" viewBox="0 0 350 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 400 130" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
  <style>
-                h1 {
-                    animation: titles 2s infinite;
+                h2 {
+                    animation: titles 4s infinite;
                     font-style: bold;
-                    text-wrap: nowrap;
                 }
 
                 @keyframes titles {
@@ -13,12 +12,12 @@
                         color: burlywood;
                     }
                     to {
-                        color: #361001;
+                        color: blue;
                     }
                 }
             </style>
             <span>
-                <h1> Python Programming ! </h1>
+                <h2>Most of the tasks in this Course were set by a group of witches who are irritated with the happiness of your entire community!!!</h2>
             </span>
         </div>
     </foreignObject>

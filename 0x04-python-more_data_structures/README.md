@@ -358,6 +358,7 @@ guillaume@ubuntu:~/0x04$
 Create two C functions that print some basic info about Python lists and Python bytes objects.
 
 ![Ni! Ni!](css/8030f8429cb90b3fc145b994112e2dae8c4030e0.gif)
+**BE AWARE:** This task was set by a witch who is not happy with the progress of your entire community!!!
 
 Python lists:
 
