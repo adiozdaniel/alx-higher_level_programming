@@ -384,7 +384,7 @@ About:
   * ```PyBytes_GET_SIZE```
 
 ```py
-julien@ubuntu:~/CPython$ python3 103-tests.py 
+julien@ubuntu:~/CPython$ python3 103-tests.py
 [.] bytes object info
   size: 5
   trying string: Hello

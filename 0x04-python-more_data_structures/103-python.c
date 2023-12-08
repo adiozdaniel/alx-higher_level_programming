@@ -83,5 +83,6 @@ void print_python_bytes(PyObject *p)
 		if (i < 5)
 			printf(" ");
 	}
+	printf("00");
 	printf("\n");
 }
