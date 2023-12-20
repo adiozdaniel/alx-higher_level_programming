@@ -1,70 +1,83 @@
 #!/usr/bin/python3
-"""a class Square definition."""
+# Author: Adioz Daniel
+"""module for a singly linked list"""
 
 
-class Square:
-    """Represent a square"""
+class Node:
+    """"defines a node"""
 
-    def __init__(self, size=0, position=(0, 0)):
-        """Initialize a new square.
+    def __init__(self, data, next_node=None):
+        """initializes the node with instance variables"""
 
-        Two Arguments:
-            size (int): The size of the new square
-            position (int, int): The position of the new square
-        """
-        self.size = size
-        self.position = position
+        self.data = data
+        self.next_node = next_node
 
     @property
-    def size(self):
-        """Get or set the current size of the square"""
-        return (self.__size)
+    def data(self):
+        """gets data attribute"""
 
-    @size.setter
-    def size(self, value):
+        return (self.__data)
+
+    @data.setter
+    def data(self, value):
+        """sets data attribute"""
+
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
+            raise TypeError('data must be an integer')
+        self.__data = value
 
     @property
-    def position(self):
-        """Get or set the current position of the square."""
-        return (self.__position)
+    def next_node(self):
+        """get next_node attribute
+        Returns: next node
+        """
 
-    @position.setter
-    def position(self, value):
-        if (not isinstance(value, tuple) or
-                len(value) != 2 or
-                not all(isinstance(num, int) for num in value) or
-                not all(num >= 0 for num in value)):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
+        return (self.__next_node)
 
-    def area(self):
-        """Return the current area of the square."""
-        return (self.__size * self.__size)
+    @next_node.setter
+    def next_node(self, value):
+        """set value of next node"""
 
-    def my_print(self):
-        """Print the square with the # character."""
-        if self.__size == 0:
-            print("")
-            return
+        if (value is not None and not isinstance(value, Node)):
+            raise TypeError('next_node must be a Node object')
 
-        [print("") for i in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
-            [print("#", end="") for k in range(0, self.__size)]
-            print("")
+        self.__next_node = value
+
+
+class SinglyLinkedList:
+    """defines a singly linked list"""
+
+    def __init__(self):
+        """Initializes the singly linked list"""
+
+        self.head = None
 
     def __str__(self):
-        """Define the print() representation of a Square."""
-        if self.__size != 0:
-            [print("") for i in range(0, self.__position[1])]
-        for i in range(0, self.__size):
-            [print(" ", end="") for j in range(0, self.__position[0])]
-            [print("#", end="") for k in range(0, self.__size)]
-            if i != self.__size - 1:
-                print("")
-        return ("")
+        """make list printable"""
+
+        printsll = ""
+        location = self.head
+        while location:
+            printsll += str(location.data) + "\n"
+            location = location.next_node
+        return printsll[:-1]
+
+    def sorted_insert(self, value):
+        """insert in a sorted fashion
+        Args:
+            value: what the value will be on the node
+        """
+        new = Node(value)
+        if not self.head:
+            self.head = new
+            return
+        if value < self.head.data:
+            new.next_node = self.head
+            self.head = new
+            return
+        location = self.head
+        while location.next_node and location.next_node.data < value:
+            location = location.next_node
+        if location.next_node:
+            new.next_node = location.next_node
+        location.next_node = new

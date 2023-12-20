@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Author: Agaba Twaazagye
+# Author: Adioz Daniel
 """Defines a square """
 
 
