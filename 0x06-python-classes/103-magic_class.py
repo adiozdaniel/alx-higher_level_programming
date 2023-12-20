@@ -3,7 +3,9 @@
   See Readme for more information
 """
 
+
 import math
+
 
 class MagicClass:
 

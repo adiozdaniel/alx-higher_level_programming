@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """class Square that definitions"""
 
+
 class Square():
     """square class with it's size and validations"""
 

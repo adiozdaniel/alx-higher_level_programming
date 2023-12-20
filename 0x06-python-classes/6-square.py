@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Square class that represents a square"""
 
+
 class Square():
     """square class with it's size and proper validations"""
 
