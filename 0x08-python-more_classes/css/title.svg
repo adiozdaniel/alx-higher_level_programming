@@ -1,15 +1,13 @@
-<svg fill="none" viewBox="0 0 350 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 510 60"
+    width="100%" height="80%"
+    xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
- <style>
+            <style>
                 h1 {
                     animation: titles 2s infinite;
                     font-style: bold;
                     text-wrap: nowrap;
-                }
-
-                .coded {
-                    color: crimson;
                 }
 
                 @keyframes titles {
@@ -17,12 +15,12 @@
                         color: burlywood;
                     }
                     to {
-                        color: crimson;
+                        color: #6e2e01;
                     }
                 }
             </style>
             <span>
-                <h1> BE AWARE !!!</h1>
+                <h1 class="title">0x08. Python - More Classes and Objects</h1>
             </span>
         </div>
     </foreignObject>
