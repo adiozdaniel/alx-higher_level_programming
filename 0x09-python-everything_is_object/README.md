@@ -80,7 +80,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 
 ## Requirements
 
-Python Scripts
+### Python Scripts
 
 - Allowed editors: `vi, vim, emacs`
 - All the files can be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
@@ -94,6 +94,12 @@ Python Scripts
 - All the classes have a documentation (`python3 -c 'print(__import__("my_module").MyClass.__doc__)'`)
 - All the functions (inside and outside a class) have a documentation (`python3 -c 'print(__import__("my_module").my_function.__doc__)`' and python3 -c 'print(`__import__`("my_module").MyClass.my_function.`__doc__`)')
 - A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
+
+### Text Files
+
+- Only one line
+- No Shebang
+- All your files should end with a new line
 
 ## Tasks
 
