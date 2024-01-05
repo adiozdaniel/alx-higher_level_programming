@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Returns the string "BestSchool" n times the number given"""
 
+
 def magic_string():
     """
     Returns a string "BestSchool" based on the current value of the counter!
