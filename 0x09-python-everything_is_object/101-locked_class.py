@@ -1,9 +1,5 @@
 #!/usr/bin/python3
-"""
-  This class overrides the __setattr__ method
-  to prevent the creation of new instance attributes
-  with an exception given for first_name.
-"""
+"""This class overrides the __setattr__ method"""
 
 
 class LockedClass:
