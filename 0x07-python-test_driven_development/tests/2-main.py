@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-matrix_divided = __import__('../2-matrix_divided').matrix_divided
+import importlib.util
+
+spec = importlib.util.spec_from_file_location("matrix_divided", "../2-matrix_divided.py")
+matrix_divided_module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(matrix_divided_module)
+matrix_divided = matrix_divided_module.matrix_divided
 
 matrix = [
     [1, 2, 3],

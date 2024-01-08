@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-text_indentation = __import__('../5-text_indentation').text_indentation
+import importlib.util
+
+spec = importlib.util.spec_from_file_location("text_indentation", "../5-text_indentation.py")
+text_indentation_module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(text_indentation_module)
+text_indentation = text_indentation_module.text_indentation
 
 text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
