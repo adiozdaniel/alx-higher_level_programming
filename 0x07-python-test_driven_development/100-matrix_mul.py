@@ -3,7 +3,7 @@
 
 
 def matrix_mul(m_a, m_b):
-    """Multiply two matrices.
+    """To multiply two matrices
 
     Args:
         m_a (list of lists of ints/floats): Is the first matrix (MxN).
