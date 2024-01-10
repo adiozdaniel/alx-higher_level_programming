@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-number_of_lines = __import__('1-number_of_lines').number_of_lines
+import importlib.util
 
-filename = "my_file_0.txt"
-nb_lines = number_of_lines(filename)
-print("{} has {:d} lines".format(filename, nb_lines))
+# Get write_file from the main directory
+spec = importlib.util.spec_from_file_location("write_file", "../1-write_file.py")
+write_file_module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(write_file_module)
+write_file = write_file_module.write_file
+
+nb_characters = write_file("my_first_file.txt", "This School is so cool!\n")
+print(nb_characters)
