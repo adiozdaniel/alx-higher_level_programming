@@ -67,7 +67,7 @@ Any form of plagiarism is strictly forbidden and will result in removal from the
 
 ## Tasks
 
-### 0. Read file (mandatory)
+### 0. Read file (#mandatory)
 
 Write a function that reads a text file (`UTF8`) and prints it to stdout:
 
@@ -104,7 +104,7 @@ GitHub repository: `alx-higher_level_programming`
 Directory: `0x0B-python-input_output`
 File: [`0-read_file.py`](0-read_file.py)
 
-### 1. Write to a file (mandatory)
+### 1. Write to a file (#mandatory)
 
 Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written:
 
@@ -138,7 +138,7 @@ GitHub repository: `alx-higher_level_programming`
 Directory: `0x0B-python-input_output`
 File: [`1-write_file.py`](1-write_file.py)
 
-### 2. Append to a file (mandatory)
+### 2. Append to a file (#mandatory)
 
 Write a function that appends a string at the end of a text file (`UTF8`) and returns the number of characters added:
 
@@ -178,7 +178,7 @@ GitHub repository: `alx-higher_level_programming`
 Directory: `0x0B-python-input_output`
 File: [`2-append_write.py`](2-append_write.py)
 
-### 3. To JSON string (mandatory)
+### 3. To JSON string (#mandatory)
 
 Write a function that returns the JSON representation of an object (string):
 
@@ -234,7 +234,7 @@ GitHub repository: `alx-higher_level_programming`
 Directory: `0x0B-python-input_output`
 File: [`3-to_json_string.py`](3-to_json_string.py)
 
-### 4. From JSON string to Object (mandatory)
+### 4. From JSON string to Object (#mandatory)
 
 Write a function that returns an object (Python data structure) represented by a JSON string:
 
@@ -286,7 +286,7 @@ GitHub repository: `alx-higher_level_programming`
 Directory: `0x0B-python-input_output`
 File: [`4-from_json_string.py`](4-from_json_string.py)
 
-### 5. Save Object to a file (mandatory)
+### 5. Save Object to a file (#mandatory)
 
 Write a function that writes an Object to a text file, using a JSON representation:
 
@@ -343,14 +343,16 @@ GitHub repository: `alx-higher_level_programming`
 Directory: `0x0B-python-input_output`
 File: [`5-save_to_json_file.py`](5-save_to_json_file.py)
 
-### 6. Create object from a JSON file (mandatory)
+### 6. Create object from a JSON file (#mandatory)
 
 Write a function that creates an Object from a “JSON file”:
 
-Prototype: def load_from_json_file(filename):
-You must use the with statement
-You don’t need to manage exceptions if the JSON string doesn’t represent an object.
-You don’t need to manage file permissions / exceptions.
+- Prototype: `def load_from_json_file(filename):`
+- You must use the `with` statement
+- You don’t need to manage exceptions if the JSON string doesn’t represent an object.
+- You don’t need to manage file permissions / exceptions.
+
+```python
 guillaume@ubuntu:~/0x0B$ cat my_fake.json
 {"is_active": true, 12 }
 guillaume@ubuntu:~/0x0B$ cat 6-main.py
@@ -397,23 +399,27 @@ guillaume@ubuntu:~/0x0B$ ./6-main.py
 [FileNotFoundError] [Errno 2] No such file or directory: 'my_set_doesnt_exist.json'
 [ValueError] Expecting property name enclosed in double quotes: line 1 column 21 (char 20)
 guillaume@ubuntu:~/0x0B$
-No test cases needed
+```
 
-Repo:
+**_No test cases needed_**
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 6-load_from_json_file.py
+**Repo:**
 
-7. Load, add, save
-   mandatory
-   Write a script that adds all arguments to a Python list, and then save them to a file:
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x0B-python-input_output`
+File: [`6-load_from_json_file.py`](6-load_from_json_file.py)
 
-You must use your function save_to_json_file from 5-save_to_json_file.py
-You must use your function load_from_json_file from 6-load_from_json_file.py
-The list must be saved as a JSON representation in a file named add_item.json
-If the file doesn’t exist, it should be created
-You don’t need to manage file permissions / exceptions.
+### 7. Load, add, save (#mandatory)
+
+Write a script that adds all arguments to a Python list, and then save them to a file:
+
+- You must use your function `save_to_json_file` from `5-save_to_json_file.py`
+- You must use your function `load_from_json_file` from `6-load_from_json_file.py`
+- The list must be saved as a JSON representation in a file named `add_item.json`
+- If the file doesn’t exist, it should be created
+- You don’t need to manage file permissions / exceptions.
+
+```python
 guillaume@ubuntu:~/0x0B$ cat add_item.json
 cat: add_item.json: No such file or directory
 guillaume@ubuntu:~/0x0B$ ./7-add_item.py
@@ -426,22 +432,26 @@ guillaume@ubuntu:~/0x0B$ ./7-add_item.py 89 Python C
 guillaume@ubuntu:~/0x0B$ cat add_item.json ; echo ""
 ["Best", "School", "89", "Python", "C"]
 guillaume@ubuntu:~/0x0B$
-No test cases needed
+```
 
-Repo:
+**_No test cases needed_**
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 7-add_item.py
+**Repo:**
 
-8. Class to JSON
-   mandatory
-   Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x0B-python-input_output`
+File: [`7-add_item.py`](7-add_item.py)
 
-Prototype: def class_to_json(obj):
-obj is an instance of a Class
-All attributes of the obj Class are serializable: list, dictionary, string, integer and boolean
-You are not allowed to import any module
+### 8. Class to JSON (#mandatory)
+
+Write a function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object:
+
+- Prototype: `def class_to_json(obj):`
+- `obj` is an instance of a Class
+- All attributes of the `obj` Class are serializable: list, dictionary, string, integer and boolean
+- You are not allowed to import any module
+
+```python
 guillaume@ubuntu:~/0x0B$ cat 8-my_class.py
 #!/usr/bin/python3
 """ My class module
@@ -523,25 +533,30 @@ guillaume@ubuntu:~/0x0B$ ./8-main_2.py
 <class 'dict'>
 {'number': 4, '\_MyClass\_\_name': 'John', 'is_team_red': True, 'score': 1}
 guillaume@ubuntu:~/0x0B$
-No test cases needed
+```
 
-Repo:
+**_No test cases needed_**
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 8-class_to_json.py
+**Repo:**
 
-9. Student to JSON
-   mandatory
-   Write a class Student that defines a student by:
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x0B-python-input_output`
+File: [`8-class_to_json.py`](8-class_to_json.py)
+
+### 9. Student to JSON (#mandatory)
+
+Write a class `Student` that defines a student by:
 
 Public instance attributes:
-first_name
-last_name
-age
-Instantiation with first_name, last_name and age: def **init**(self, first_name, last_name, age):
-Public method def to_json(self): that retrieves a dictionary representation of a Student instance (same as 8-class_to_json.py)
-You are not allowed to import any module
+
+- `first_name`
+- `last_name`
+- `age`
+  Instantiation with `first_name`, `last_name` and `age`: `def **init**(self, first_name, last_name, age):`
+- Public method `def to_json(self):` that retrieves a dictionary representation of a `Student` instance (same as `8-class_to_json.py`)
+- You are not allowed to import any module
+
+```python
 guillaume@ubuntu:~/0x0B$ cat 9-main.py
 #!/usr/bin/python3
 Student = **import**('9-student').Student
@@ -568,27 +583,31 @@ Bob
 27
 <class 'int'>
 guillaume@ubuntu:~/0x0B$
-No test cases needed
+```
 
-Repo:
+**_No test cases needed_**
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 9-student.py
+**Repo:**
 
-10. Student to JSON with filter
-    mandatory
-    Write a class Student that defines a student by: (based on 9-student.py)
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x0B-python-input_output`
+File: [`9-student.py`](9-student.py)
 
-Public instance attributes:
-first_name
-last_name
-age
-Instantiation with first_name, last_name and age: def **init**(self, first_name, last_name, age):
-Public method def to_json(self, attrs=None): that retrieves a dictionary representation of a Student instance (same as 8-class_to_json.py):
-If attrs is a list of strings, only attribute names contained in this list must be retrieved.
-Otherwise, all attributes must be retrieved
-You are not allowed to import any module
+### 10. Student to JSON with filter (#mandatory)
+
+Write a class `Student` that defines a student by: (based on `9-student.py`)
+
+- Public instance attributes:
+  - `first_name`
+  - `last_name`
+  - `age`
+- Instantiation with `first_name`, `last_name` and `age`: `def **init**(self, first_name, last_name, age):`
+- Public method def to_json(self, attrs=None): that retrieves a dictionary representation of a `Student` instance (same as `8-class_to_json.py`):
+  - If `attrs` is a list of strings, only attribute names contained in this list must be retrieved.
+  - Otherwise, all attributes must be retrieved
+- You are not allowed to import any module
+
+```python
 guillaume@ubuntu:~/0x0B$ cat 10-main.py
 #!/usr/bin/python3
 Student = **import**('10-student').Student
@@ -609,33 +628,37 @@ guillaume@ubuntu:~/0x0B$ ./10-main.py
 {'age': 27, 'first_name': 'Bob'}
 {'age': 27}
 guillaume@ubuntu:~/0x0B$
-No test cases needed
+```
 
-Repo:
+**_No test cases needed_**
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 10-student.py
+**Repo:**
 
-11. Student to disk and reload
-    mandatory
-    Write a class Student that defines a student by: (based on 10-student.py)
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x0B-python-input_output`
+File: [`10-student.py`](10-student.py)
 
-Public instance attributes:
-first_name
-last_name
-age
-Instantiation with first_name, last_name and age: def **init**(self, first_name, last_name, age):
-Public method def to_json(self, attrs=None): that retrieves a dictionary representation of a Student instance (same as 8-class_to_json.py):
-If attrs is a list of strings, only attributes name contain in this list must be retrieved.
-Otherwise, all attributes must be retrieved
-Public method def reload_from_json(self, json): that replaces all attributes of the Student instance:
-You can assume json will always be a dictionary
-A dictionary key will be the public attribute name
-A dictionary value will be the value of the public attribute
-You are not allowed to import any module
+### 11. Student to disk and reload (#mandatory)
+
+Write a class `Student` that defines a student by: (based on `10-student.py`)
+
+- Public instance attributes:
+  - `first_name`
+  - `last_name`
+  - `age`
+- Instantiation with `first_name`, `last_name` and `age`: `def **init**(self, first_name, last_name, age):`
+- Public method `def to_json(self, attrs=None):` that retrieves a dictionary representation of a `Student` instance (same as `8-class_to_json.py`):
+  - If `attrs` is a list of strings, only attributes name contain in this list must be retrieved.
+  - Otherwise, all attributes must be retrieved
+- Public method `def reload_from_json(self, json):` that replaces all attributes of the `Student` instance:
+  - You can assume `json` will always be a dictionary
+  - A dictionary key will be the public attribute name
+  - A dictionary value will be the value of the public attribute
+- You are not allowed to import any module
+
 Now, you have a simple implementation of a serialization and deserialization mechanism (concept of representation of an object to another format, without losing any information and allow us to rebuild an object based on this representation)
 
+```python
 guillaume@ubuntu:~/0x0B$ cat 11-main.py
 #!/usr/bin/python3
 import os
@@ -696,25 +719,30 @@ John Doe 23
 guillaume@ubuntu:~/0x0B$ cat student.json ; echo ""
 {"last_name": "Doe", "first_name": "John", "age": 23}
 guillaume@ubuntu:~/0x0B$
-No test cases needed
+```
 
-Repo:
+**_No test cases needed_**
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 11-student.py
+**Repo:**
 
-12. Pascal's Triangle
-    mandatory
-    Technical interview preparation:
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x0B-python-input_output`
+File: [`11-student.py`](11-student.py)
 
-You are not allowed to google anything
-Whiteboard first
-Create a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n:
+### 12. Pascal's Triangle (#mandatory)
 
-Returns an empty list if n <= 0
-You can assume n will be always an integer
-You are not allowed to import any module
+Technical interview preparation:
+
+- You are not allowed to google anything
+- Whiteboard first
+
+Create a function `def pascal_triangle(n):` that returns a list of lists of integers representing the Pascal’s triangle of `n`:
+
+- Returns an empty list if `n <= 0`
+- You can assume `n` will be always an integer
+- You are not allowed to import any module
+
+```python
 guillaume@ubuntu:~/0x0B$ cat 12-main.py
 #!/usr/bin/python3
 """
@@ -740,8 +768,150 @@ guillaume@ubuntu:~/0x0B$ ./12-main.py
 [1,3,3,1]
 [1,4,6,4,1]
 guillaume@ubuntu:~/0x0B$
-Repo:
+```
 
-GitHub repository: alx-higher_level_programming
-Directory: 0x0B-python-input_output
-File: 12-pascal_triangle.py
+**Repo:**
+
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x0B-python-input_output`
+File: [`12-pascal_triangle.py`](12-pascal_triangle.py)
+
+### 13. Search and update (#advanced)
+
+Write a function that inserts a line of text to a file, after each line containing a specific string (see example):
+
+- Prototype: `def append_after(filename="", search_string="", new_string=""):`
+- You must use the `with` statement
+- You don’t need to manage `file permission` or `file doesn't exist` exceptions.
+- You are not allowed to import any module
+
+```python
+guillaume@ubuntu:~/0x0B$ cat 100-main.py
+#!/usr/bin/python3
+append_after = **import**('100-append_after').append_after
+
+append_after("append_after_100.txt", "Python", "\"C is fun!\"\n")
+
+guillaume@ubuntu:~/0x0B$ cat append_after_100.txt
+At Holberton School,
+Python is really important,
+But it can be very hard if:
+
+- You don't get all Pythonic tricks
+- You don't have strong C knowledge.
+  guillaume@ubuntu:~/0x0B$ ./100-main.py
+  guillaume@ubuntu:~/0x0B$ cat append_after_100.txt
+  At School,
+  Python is really important,
+  "C is fun!"
+  But it can be very hard if:
+- You don't get all Pythonic tricks
+  "C is fun!"
+- You don't have strong C knowledge.
+  guillaume@ubuntu:~/0x0B$ ./100-main.py
+  guillaume@ubuntu:~/0x0B$ cat append_after_100.txt
+  At School,
+  Python is really important,
+  "C is fun!"
+  "C is fun!"
+  But it can be very hard if:
+- You don't get all Pythonic tricks
+  "C is fun!"
+  "C is fun!"
+- You don't have strong C knowledge.
+  guillaume@ubuntu:~/0x0B$
+```
+
+**_No test cases needed_**
+
+**Repo:**
+
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x0B-python-input_output`
+File: [`100-append_after.py`](100-append_after.py)
+
+### 14. Log parsing (#advanced)
+
+Write a script that reads `stdin` line by line and computes metrics:
+
+- Input format: `<IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>`
+- Each 10 lines and after a keyboard interruption (`CTRL + C`), prints those statistics since the beginning:
+  - Total file size: `File size: <total size>`
+  - where is the sum of all previous (see input format above)
+  - Number of lines by status code:
+    - possible status code: `200`, `301`, `400`, `401`, `403`, `404`, `405` and `500`
+    - if a status code doesn’t appear, don’t print anything for this status code
+    - format: `<status code>: <number>`
+    - status codes should be printed in ascending order
+
+```python
+guillaume@ubuntu:~/0x0B$ cat 101-generator.py
+#!/usr/bin/python3
+import random
+import sys
+from time import sleep
+import datetime
+
+for i in range(10000):
+sleep(random.random())
+sys.stdout.write("{:d}.{:d}.{:d}.{:d} - [{}] \"GET /projects/260 HTTP/1.1\" {} {}\n".format(
+random.randint(1, 255), random.randint(1, 255), random.randint(1, 255), random.randint(1, 255),
+datetime.datetime.now(),
+random.choice([200, 301, 400, 401, 403, 404, 405, 500]),
+random.randint(1, 1024)
+))
+sys.stdout.flush()
+
+guillaume@ubuntu:~/0x0B$ ./101-generator.py | ./101-stats.py
+File size: 5213
+200: 2
+401: 1
+403: 2
+404: 1
+405: 1
+500: 3
+File size: 11320
+200: 3
+301: 2
+400: 1
+401: 2
+403: 3
+404: 4
+405: 2
+500: 3
+File size: 16305
+200: 3
+301: 3
+400: 4
+401: 2
+403: 5
+404: 5
+405: 4
+500: 4
+^CFile size: 17146
+200: 4
+301: 3
+400: 4
+401: 2
+403: 6
+404: 6
+405: 4
+500: 4
+Traceback (most recent call last):
+File "./101-stats.py", line 15, in <module>
+Traceback (most recent call last):
+File "./101-generator.py", line 8, in <module>
+for line in sys.stdin:
+KeyboardInterrupt
+sleep(random.random())
+KeyboardInterrupt
+guillaume@ubuntu:~/0x0B$
+```
+
+**_No test cases needed_**
+
+**Repo:**
+
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x0B-python-input_output`
+File: [`101-stats.py`](101-stats.py)
