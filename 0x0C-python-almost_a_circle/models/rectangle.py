@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-""" Module that contains class Rectangle,
-inheritance of class Base
+""" This module contains class Rectangle,
+Which is an inheritance of the class Base
 """
 from models.base import Base
 
 
 class Rectangle(Base):
-    """ Class Rectangle """
+    """ Class Rectangle! """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """ Initializes instances """
+        """ Initializes instances! """
         self.width = width
         self.height = height
         self.x = x

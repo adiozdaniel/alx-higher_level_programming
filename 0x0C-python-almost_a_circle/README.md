@@ -105,7 +105,7 @@ guillaume@ubuntu:~/$
 
 _Note that this is just an example. The number of tests you create can be different from the above example._
 
-\***\*Repo**:\*\*
+**Repo**:
 
 - GitHub repository: `alx-higher_level_programming`
 - Directory: `0x0C-python-almost_a_circle`
@@ -159,7 +159,7 @@ guillaume@ubuntu:~/$ ./0-main.py
 guillaume@ubuntu:~/$
 ```
 
-\***\*Repo**:\*\*
+**Repo**:
 
 - GitHub repository: `alx-higher_level_programming`
 - Directory: `0x0C-python-almost_a_circle`
@@ -208,7 +208,7 @@ guillaume@ubuntu:~/$ ./1-main.py
 guillaume@ubuntu:~/$
 ```
 
-\***\*Repo**:\*\*
+**Repo**:
 
 - GitHub repository: `alx-higher_level_programming`
 - Directory: `0x0C-python-almost_a_circle`

@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-""" Module that contains class Square,
-inheritance of class Rectangle
+""" This module contains the class Square,
+Which is an inheritance of the class Rectangle
 """
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ Class Rectangle """
+    """ Class Rectangle! """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """ Initializes instances """
+        """ Initializes instances! """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """ str special method """
+        """ str special method! """
         str_square = "[Square] "
         str_id = "({}) ".format(self.id)
         str_xy = "{}/{} - ".format(self.x, self.y)
