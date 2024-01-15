@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ This module tests the Base class! """
 import unittest
+import os
 from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle
@@ -71,7 +72,7 @@ class TestBaseMethods(unittest.TestCase):
 
         try:
             os.remove("Square.json")
-        except:
+        except Exception as e:
             pass
 
         Square.save_to_file([])
@@ -88,7 +89,7 @@ class TestBaseMethods(unittest.TestCase):
                 self.assertEqual(str_out.getvalue(), res)
         try:
             os.remove("Rectangle.json")
-        except:
+        except Exception as e:
             pass
 
         Rectangle.save_to_file([])
